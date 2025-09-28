@@ -175,13 +175,11 @@ card-body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: conic-gradient(var(--blue) 60deg, var(--purple) 0deg, );
+    background: conic-gradient(var(--blue) 60deg, var(--purple) 0deg);
     border-radius: 50%;
     animation: pulses 3s;
     transition: all ease;
-    box-shadow: rgb(185, 38, 38) 0px 3px 6px,
-                 rgba(12, 1, 1, 0.23) 0px 3px 6px;}
-
+  
 .progress-bar-inner{
     width: 90%;
     height: 90%;
@@ -198,3 +196,7 @@ card-body{
 }
 
 
+}
+
+/*  box-shadow: rgb(185, 38, 38) 0px 3px 6px,
+                 rgba(12, 1, 1, 0.23) 0px 3px 6px;}
