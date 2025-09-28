@@ -22,6 +22,7 @@
     font-family: 'Roboto', sans-serif;
 
    }
+   /*ajusta o coprpo da pagina */
    body{
     height: 100vh;
     display: flex;
@@ -30,6 +31,7 @@
     background-color: rgb(40, 40, 85);
 
 }
+/* container agrupa tudo */
 .container{
     display: flex;
     flex-direction: column;
@@ -41,7 +43,8 @@
         
 }
 
-.card{
+/* fundo da carta */
+.card{ 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,7 +77,7 @@ card-body{
 
 
 
-
+/* header da carta  agrupa tudo!*/
 .card-header{
     width: 100%;
     display: flex;
@@ -85,6 +88,7 @@ card-body{
 
 }
 
+/* titulo da carta */
 .card-header h1{
     color: var(--title-primary-color);
     font-size: 1.8rem;
@@ -96,7 +100,7 @@ card-body{
     background-color: rgb(61, 61, 104);
  }
 
-
+/* botao pomodoro */
 .active{ 
     background-color: var(--blue);
     color: var(--title-primary-color);
@@ -110,6 +114,7 @@ card-body{
     height: 40px;
                 }
 
+/* botao short break */
 .break{
     background-color: rgb(6, 6, 58);
     color: var(--title-primary-color);
@@ -123,6 +128,8 @@ card-body{
     height: 40px;
                 }
 
+
+/* botao start */
 .btn-sucess{
     background-color: var(--green);
     color: var(--title-primary-color);
@@ -135,6 +142,7 @@ card-body{
     height: 40px;
 }
 
+/* botao stop */
 .btn-danger{
     background-color: var(--red);
     color: var(--title-primary-color);
@@ -147,6 +155,7 @@ card-body{
     height: 40px;
 }
 
+/* botao resete */
 .btn-warning{
     background-color: var(--yellow);
     color: var(--title-primary-color);
@@ -159,14 +168,14 @@ card-body{
     height: 40px;
 }
 
+/* animação do circulo */
 .progress-bar{
-    width: 110%;
-    height: 180px;
+    width: 120%;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: conic-gradient(var(--blue) 60deg
-                     var(--purple) 0deg, );
+    background: conic-gradient(var(--blue) 60deg, var(--purple) 0deg, );
     border-radius: 50%;
     animation: pulses 3s;
     transition: all ease;
@@ -185,7 +194,7 @@ card-body{
     background: var(--blue);
     box-shadow: rgb(12, 12, 48) 0px 3px 6px,
                  rgba(12, 1, 1, 0.23) 0px 3px 6px;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 
