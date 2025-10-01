@@ -15,11 +15,13 @@
             <div class="card-container-buttons">
 
                 <button id = buttonTypePomodoro
-                        class ="active">
+                        class ="active"
+                        onclick="setPomodoroType(TIMER_TYPE_POMODORO);">
                         Pomodoro
                 </button>
                 <button id = buttonTypeShortBreak
-                        class="break">
+                        class="break"
+                        onclick="setPomodoroType(TIMER_TYPE_SHORT_BREAK);">
                         Short Break 
                 </button>
                 <button></button>
@@ -46,7 +48,7 @@
                             onclick="stopTimer()">
                         stop
                     </button>
-                    <button class="btn-warning">
+                    <button onclick = "resetTimer();" class="btn-warning">
                         reset
                     </button>
                 </div>

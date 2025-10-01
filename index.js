@@ -17,26 +17,40 @@ let multiplierFactor = 360 / timerValue; // Variavel que guarda o fator de multi
 
 // Função para trasnformar segundos no formato MM:SS
 
-function formatNumberInStringMinute(number){
+// Função para transformar segundos no formato MM:SS
+function formatNumberInStringMinute(number) {
+    const minutes = Math.trunc(number / 60)
+        .toString()
+        .padStart(2, '0');
 
-    const minutes = Math.trunc(number / 60);
-                    .toString()
-                    .padStart(2, '0');
+    const seconds = Math.trunc(number % 60)
+        .toString()
+        .padStart(2, '0');
 
-    const seconds = math.trunc(number % 60);
-                    .toString()
-                    .padStart(2, '0');             
-
-     return `${minutes}:${seconds}`;               
+    return `${minutes}:${seconds}`;
 }
 
 const startTimer = () => {
     progressInterval = setInterval(() => {
         timerValue--;
+        setInfoCircularProgressBar();
 }, 1000);
 }
 
 const stopTimer = () => clearInterval(progressInterval);
+
+const resetTimer = () => {
+    clearInterval(progressInterval);
+
+    timerValue = (pomodoroType === TIMER_TYPE_POMODORO) 
+    ? pomodoroTimeInSeconds 
+        : shortBreakTimeInSeconds;
+
+        multiplierFactor = 360 / timerValue;
+    setInfoCircularProgressBar();
+    audio.stop();
+
+}
 
 function setInfoCircularProgressBar(){
 
@@ -47,5 +61,20 @@ function setInfoCircularProgressBar(){
 
     circularProgressBarNumber.textContent = `${formatNumberInStringMinute(timerValue)}`;
 
-    circularProgressBar.style.background = `${timerValue * multiplierFactor}`
+    circularProgressBar.style.background = `conic-gradient(var(--blue) ${timerValue * multiplierFactor}deg, var(--purple) 0deg)`;
+}
+
+const setPomodoroType = (type) => {
+    pomodoroType = type;
+
+    if(type === TIMER_TYPE_POMODORO){
+        buttonTypeShortBreak.classList.remove('active');
+        buttonTypePomodoro.classList.add('active');
+        
+    }else{
+        buttonTypePomodoro.classList.remove('active');
+        buttonTypeShortBreak.classList.add('active');
+    }
+
+    resetTimer();
 }

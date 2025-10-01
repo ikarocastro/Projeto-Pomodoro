@@ -87,7 +87,7 @@
 
 /* botao pomodoro */
 .active{ 
-    background-color: var(--blue);
+    background-color: rgb(38, 11, 114);
     color: var(--title-primary-color);
     font-weight: 700;
     font-size: 12px;
@@ -97,7 +97,7 @@
                  rgba(0, 0, 0, 0.23) 0px 3px 6px;
     width: 90px;
     height: 40px;
-                    
+     
 }
 
 /* botao short break */
