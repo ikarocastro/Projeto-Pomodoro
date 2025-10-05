@@ -28,9 +28,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(40, 40, 85);
-
-}
+    background: url(img/montanha.JPG);
+    }
+    /*background-color: rgb(74, 74, 155);
 /* container agrupa tudo */
 .container{
     display: flex;
@@ -82,7 +82,7 @@
                  rgba(0, 0, 0, 0.23) 0px 3px 6px;
     padding: 10px;
     border-radius: 20px;
-    background-color: rgb(61, 61, 104);
+    background-color: rgb(91, 91, 196);
  }
 
 /* botao pomodoro */
