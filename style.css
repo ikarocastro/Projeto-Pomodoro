@@ -29,6 +29,7 @@
     align-items: center;
     justify-content: center;
     background: url(img/montanha.JPG);
+    transition: background 0.5s ease-in-out;
     }
     /*background-color: rgb(74, 74, 155);
 /* container agrupa tudo */
@@ -225,6 +226,22 @@
     }
 }
 
+.footer{
+    background-color: #0a1922;
+    color: var(--title-primary-color);
+    padding: 13px 20px;
+    border-radius: 20px;
+    margin-top: 500px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: rgb(12, 12, 48) 0px 3px 6px,
+                rgba(12, 1, 1, 0.23) 0px 3px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 
+}
 /*  box-shadow: rgb(185, 38, 38) 0px 3px 6px,
                  rgba(12, 1, 1, 0.23) 0px 3px 6px;}
