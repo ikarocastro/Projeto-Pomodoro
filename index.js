@@ -78,3 +78,34 @@ const setPomodoroType = (type) => {
 
     resetTimer();
 }
+
+const addTaskButton = document.getElementById("add-task");
+const taskInput = document.getElementById("new-task");
+const taskList = document.getElementById("task-list");
+
+addTaskButton.addEventListener("click", addTask);
+taskList.addEventListener("click", handleTaskClick);
+
+function addTask() {
+  const taskText = taskInput.value.trim();
+  if (taskText === "") return;
+
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <span>${taskText}</span>
+    <button class="delete-task">🗑️</button>
+  `;
+
+  taskList.appendChild(li);
+  taskInput.value = "";
+}
+
+function handleTaskClick(e) {
+  const li = e.target.closest("li");
+
+  if (e.target.classList.contains("delete-task")) {
+    li.remove();
+  } else {
+    li.classList.toggle("completed");
+  }
+}
